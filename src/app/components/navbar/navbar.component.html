@@ -13,4 +13,7 @@
                 <a class="nav-link" routerLink="carga">Load photos</a>
             </li>
         </ul>
+        <form *ngIf="'/login'" class="form-inline my-2 my-lg-0">
+            <button (click)="salir()" class="btn btn-outline-danger my-2 my-sm-0">Logout</button>
+        </form>
     </div>

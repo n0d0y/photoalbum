@@ -138,6 +138,7 @@ export class CargaImagenesService {
   const fileRef = storageRef.child(`${ this.CARPETA_IMAGENES }/${ itemnombre }`);
   let blob = null;
 
+
   fileRef.getDownloadURL().then(function(url) {
 
       //  console.log('it works1');
@@ -152,18 +153,19 @@ export class CargaImagenesService {
 
         xhr.open('GET', url);
         xhr.send();
+        console.log('Url:' + url);
       // console.log('algo', blob);
       // console.log(xhr.open('GET', url));
       // console.log('it works 3');
 
 
-       let img = document.getElementById('imagen');
+       //let img = document.getElementById('imagen');
 
-       img.setAttribute("download", url);
+       //img.setAttribute("download", url);
 
       // console.log(img);
 
-       img.click();
+       //img.click();
 
   }).catch(function(error) {
       console.log(error);

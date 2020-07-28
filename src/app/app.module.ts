@@ -14,6 +14,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from 'src/environments/environment';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     FotosComponent,
     CargaComponent,
     NavbarComponent,
-    NgDropFilesDirective
+    NgDropFilesDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
     AngularFireModule.initializeApp( environment.firebase ),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [
